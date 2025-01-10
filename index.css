@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* CSS Document */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+:root {
+    /*Brand Colors*/
+    --foreground1: #ed7a0a;
+    --midground: #F7D7A8;
+    --background: #f6ecdc;
+    --offBlack:;
+    --active:#0E8D93;
+    --hoverbg:#f6ecdc;
+    --hovertext:#ed7a0a;
+
+    /*Font Names*/
+    --headFont: 'espresso-dolce';
+    --pFont: 'angleterre-book';
+
+    /*Font Sizes*/
+    --multiplier:1.5;
+    --pSize:calc(16px * var(--multiplier));
+    --h1Size:calc(20px * var(--multiplier));
+    --h3Size:calc(18px * var(--multiplier));
+
+    /*Other Properties*/
+    --boxShadow:2px 2px 10px rgba(0, 0, 0, 0.25);
+    --borderRadius: 12px;
+
+    /*Grid Widths*/
+    --wrapWidth:1080px;
+    --closewidth: 10px;
+    --gridwidth: 30px;
+}
+/*Fonts*/
+@font-face {
+	font-family: var(--headFont);
+	src: url('fonts/espresso-dolce.ttf') format('truetype');
+}
+@font-face {
+	font-family: var(--pFont);
+	src: url('fonts/angltrr.ttf') format('truetype');
+}
+/*Element Defaults and Overrides*/
+img {
+    width: 100%;
+    height: auto;
+    max-width: var(--wrapWidth);
+}
+ol, ul{
+    margin-left: 35px;
+}
+/*Font Configurations*/
+h1{
+    font-family: var(--headFont), sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size:var(--h1Size);
+    margin:0px;
+}
+h3{
+    font-family: var(--headFont), sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size:var(--h3Size);
+}
+p{
+    font-family: var(--pFont), serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: var(--pSize);
+    font-style: normal;
+}
+li{
+    font-family: var(--pFont), serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: var(--pSize);
+    font-style: normal;
+}
+a{
+    font-family: var(--pFont), sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    color:var(--background);
+}
+body{
+    background-color: var(--background);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: var(--wrapWidth);
+}
+.hide{
+    display:none;
+}
+.button{
+    border-radius: var(--borderRadius);
+    background-color: var(--foreground);
+    color: var(--background);
+    font-family: var(--headFont), sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size:var(--h3Size);
+}
+.button.active{
+    background-color: var(--active);
+    color: var(--background);
+}
